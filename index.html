@@ -99,8 +99,20 @@
             "
           >
             <div class="static-txt text-4xl lg:text-7xl font-bold mt-2 md:mt-0">
-              I'm a <br />
-              <a
+              I'm a <span class="animate text-white">
+
+              </span> <br>
+              
+            </div>
+            
+            <!-- <ul class="dynamic-txts">
+              <li><span>Developer</span></li>
+              <li><span>Freelancer</span></li>
+              <li><span>Developer</span></li>
+              <li><span>Freelancer</span></li>
+            </ul> -->
+          </div>
+          <a
                 href="https://drive.google.com/uc?id=1n94x6zTLJfe0Oggh0DDD00gsY2vpWt8P"
                 target="_blank"
               >
@@ -115,24 +127,21 @@
                     py-2
                     px-4
                     text-xl
+                    left-0
+                    ml-24
+                    md:ml-96
+                    lg:ml-32
                     border border-blue
                     hover:text-gray-400
                     rounded
                     mt-8
-                    md:mt-8
+                    
+                    lg:mt-24
                   "
                 >
                   Download CV
                 </button>
               </a>
-            </div>
-            <ul class="dynamic-txts">
-              <li><span>Developer</span></li>
-              <li><span>Freelancer</span></li>
-              <li><span>Developer</span></li>
-              <li><span>Freelancer</span></li>
-            </ul>
-          </div>
           <div class="flex justify-center items-center w-full md:w-1/2">
             <div class="md:mt-20">
               <img src="portrait.png" class="image mt-24 md:mt-0 h-96"/ >
@@ -650,6 +659,20 @@
           loop: true,
         },
       },
+    });
+  </script>
+ <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed('.animate',{
+      strings:[
+        "Developer",
+        "Developer",
+        "Freelancer"
+
+      ],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
     });
   </script>
 </html>
