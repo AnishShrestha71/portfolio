@@ -5,6 +5,7 @@
 }
 html{
   scroll-behavior: smooth;
+  
 }
 body {
   overflow-x: hidden;
@@ -13,7 +14,8 @@ body {
 .header {
   position: relative;
   background-color: rgb(89, 89, 175);
-  height: 105vh;
+  height: 105vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
 }
 .menu {
   color: white;
