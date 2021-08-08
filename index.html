@@ -172,7 +172,10 @@
             <img src="skills/tailwind.png" alt="" class="h-40 w-40 mx-auto" />
           </div>
           <div>
-            <img src="skills/html.png" alt="" class="h-40 w-40 mx-auto" />
+            <img src="skills/mysql.png" alt="" class="h-40 w-40 mx-auto" />
+          </div>
+          <div>
+            <img src="skills/php.png" alt="" class="h-40 w-40 mx-auto" />
           </div>
           <div>
             <img src="skills/css.png" alt="" class="h-40 w-40 mx-auto" />
@@ -605,7 +608,7 @@
     $(".owl-carousel").owlCarousel({
       loop: true,
       margin: 40,
-
+      autoplay: true,
       responsiveClass: true,
       responsive: {
         0: {
@@ -618,8 +621,8 @@
         },
         1000: {
           items: 6,
-          nav: true,
-          loop: false,
+          nav: false,
+          loop: true,
         },
       },
     });
