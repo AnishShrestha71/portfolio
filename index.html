@@ -51,7 +51,7 @@
   <body>
     <div>
       <div class="header" id="home">
-        <div class="menu fixed top-0 flex justify-between w-full p-2 z-50">
+        <div class="menu fixed top-0 flex justify-between w-full p-2 z-50 ">
           <div>
             <img src="logo.png" alt="" class="h-8 w-8" />
           </div>
@@ -68,12 +68,12 @@
               "
             >
               <li>
-                <a href="#home" onclick="hideMenu()">Home</a>
+                <a href="#home" onclick="hideMenu()" class="hover:text-gray-400">Home</a>
               </li>
-              <li><a href="#skill" onclick="hideMenu()">Skill</a></li>
-              <li><a href="#projects" onclick="hideMenu()">Projects</a></li>
-              <li><a href="#about" onclick="hideMenu()">About</a></li>
-              <li><a href="#contact" onclick="hideMenu()">Contact</a></li>
+              <li><a href="#skill" onclick="hideMenu()" class="hover:text-gray-400">Skill</a></li>
+              <li><a href="#projects" onclick="hideMenu()" class="hover:text-gray-400"> Projects</a></li>
+              <li><a href="#about" onclick="hideMenu()" class="hover:text-gray-400">About</a></li>
+              <li><a href="#contact" onclick="hideMenu()" class="hover:text-gray-400">Contact</a></li>
             </ul>
           </div>
           <div class="burger">
@@ -87,6 +87,7 @@
             class="
               wrapper
               flex
+              flex-col
               justify-center
               items-center
               w-full
@@ -99,26 +100,17 @@
             "
           >
             <div class="static-txt text-4xl lg:text-7xl font-bold mt-2 md:mt-0">
-              I'm a <span class="animate text-white">
-
-              </span> <br>
+              I'm a <span class="animate text-white"> </span>
               
             </div>
-            
-            <!-- <ul class="dynamic-txts">
-              <li><span>Developer</span></li>
-              <li><span>Freelancer</span></li>
-              <li><span>Developer</span></li>
-              <li><span>Freelancer</span></li>
-            </ul> -->
-          </div>
-          <a
+            <div>
+              <a
                 href="https://drive.google.com/uc?id=1n94x6zTLJfe0Oggh0DDD00gsY2vpWt8P"
                 target="_blank"
               >
                 <button
                   class="
-                    absolute
+                   
                     bg-transparent
                     hover:bg-blue
                     text-black
@@ -127,21 +119,25 @@
                     py-2
                     px-4
                     text-xl
-                    left-0
-                    ml-28
-                    md:ml-96
-                    lg:ml-32
+                    mt-8
                     border border-blue
                     hover:text-gray-400
                     rounded
-                    mt-8
                     
-                    lg:mt-24
                   "
                 >
                   Download CV
                 </button>
               </a>
+            </div>
+            <!-- <ul class="dynamic-txts">
+              <li><span>Developer</span></li>
+              <li><span>Freelancer</span></li>
+              <li><span>Developer</span></li>
+              <li><span>Freelancer</span></li>
+            </ul> -->
+          </div>
+
           <div class="flex justify-center items-center w-full md:w-1/2">
             <div class="md:mt-20">
               <img src="portrait.png" class="image mt-24 md:mt-0 h-96"/ >
@@ -661,18 +657,13 @@
       },
     });
   </script>
- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
-    var typed = new Typed('.animate',{
-      strings:[
-        "Developer",
-        "Developer",
-        "Freelancer"
-
-      ],
+    var typed = new Typed(".animate", {
+      strings: ["Developer", "Developer", "Freelancer"],
       typeSpeed: 50,
       backSpeed: 50,
-      loop: true
+      loop: true,
     });
   </script>
 </html>
