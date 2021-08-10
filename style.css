@@ -27,6 +27,9 @@ body {
 .scroll-active .burger div {
   background-color: black;
 }
+.image{
+  height: 19rem;
+}
 
 .burger {
   display: none;
