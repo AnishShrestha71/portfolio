@@ -62,7 +62,7 @@ body {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .menu ul {
     position: absolute;
     left: 0;
