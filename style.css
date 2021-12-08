@@ -3,9 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
-  
 }
 body {
   overflow-x: hidden;
@@ -20,7 +19,7 @@ body {
 .menu {
   color: white;
 }
-.image{
+.image {
   height: 22rem;
 }
 .scroll-active {
@@ -31,7 +30,6 @@ body {
 .scroll-active .burger div {
   background-color: black;
 }
-
 
 .burger {
   display: none;
@@ -77,7 +75,6 @@ body {
     width: 100%;
     padding-bottom: 4px;
     color: black;
-   
   }
 
   .burger {
@@ -127,10 +124,46 @@ body {
   fill: #fcfafa;
 }
 
-
-.card{
+.card {
   height: 510px;
   overflow-y: hidden;
-  
+}
+.loader-wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
 }
 
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

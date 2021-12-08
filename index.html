@@ -49,7 +49,10 @@
     />
   </head>
   <body>
-    <div>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+      <div>
       <div class="header" id="home">
         <div class="menu fixed top-0 flex justify-between w-full p-2 z-50 ">
           <div>
@@ -670,5 +673,11 @@
       backSpeed: 50,
       loop: true,
     });
+  </script>
+
+  <script>
+    $(window).on("load", function(){
+      $(".loader-wrapper").fadeOut("slow");
+    })
   </script>
 </html>
