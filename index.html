@@ -3,14 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      property="og:url"
-      content="https://anishshrestha71.github.io/portfolio/"
-    />
-    <meta
-      property="og:image"
-      content="https://anishshrestha71.github.io/portfolio/img.jpg"
-    />
+    <meta property="og:url" content="https://anishshrestha71.github.io/portfolio/" />
+    <meta property="og:image" content="https://anishshrestha71.github.io/portfolio/img.jpg" />
     <meta property="og:title" content="Anish Shrestha Portfolio" />
     <meta
       property="og:description"
@@ -29,10 +23,7 @@
     <link rel="shortcut icon" href="logo.ico" />
     <title>Portfolio || Anish Shrestha</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -52,31 +43,25 @@
     <div class="loader-wrapper">
       <div class="loader"></div>
     </div>
-      <div>
+    <div>
       <div class="header" id="home">
-        <div class="menu fixed top-0 flex justify-between w-full p-2 z-50 ">
+        <div class="menu fixed top-0 flex justify-between w-full p-2 z-50">
           <div>
             <img src="logo.png" alt="" class="h-8 w-8" />
           </div>
           <div class="">
-            <ul
-              class="
-                ul-div
-                hidden
-                md:flex
-                space-y-4
-                md:space-y-0 md:space-x-8
-                text-xl
-                md:mr-8
-              "
-            >
+            <ul class="ul-div hidden md:flex space-y-4 md:space-y-0 md:space-x-8 text-xl md:mr-8">
               <li>
                 <a href="#home" onclick="hideMenu()" class="hover:text-gray-400">Home</a>
               </li>
               <li><a href="#skill" onclick="hideMenu()" class="hover:text-gray-400">Skill</a></li>
-              <li><a href="#projects" onclick="hideMenu()" class="hover:text-gray-400"> Projects</a></li>
+              <li>
+                <a href="#projects" onclick="hideMenu()" class="hover:text-gray-400"> Projects</a>
+              </li>
               <li><a href="#about" onclick="hideMenu()" class="hover:text-gray-400">About</a></li>
-              <li><a href="#contact" onclick="hideMenu()" class="hover:text-gray-400">Contact</a></li>
+              <li>
+                <a href="#contact" onclick="hideMenu()" class="hover:text-gray-400">Contact</a>
+              </li>
             </ul>
           </div>
           <div class="burger">
@@ -85,12 +70,11 @@
             <div class="line3"></div>
           </div>
         </div>
-        <div class="header-content flex items-center flex-col sm:flex-row">
+        <div class="header-content flex items-center flex-col sm:flex-row relative z-10">
           <div
             class="
               wrapper
-              flex
-              flex-col
+              flex flex-col
               justify-center
               items-center
               w-full
@@ -104,7 +88,6 @@
           >
             <div class="static-txt text-4xl lg:text-7xl font-bold mt-2 sm:mt-0">
               I'm a <span class="animate text-white"> </span>
-              
             </div>
             <div>
               <a
@@ -113,7 +96,6 @@
               >
                 <button
                   class="
-                   
                     bg-transparent
                     hover:bg-blue
                     text-black
@@ -126,7 +108,6 @@
                     border border-blue
                     hover:text-gray-400
                     rounded
-                    
                   "
                 >
                   Download CV
@@ -148,40 +129,46 @@
           </div>
         </div>
 
-        <div class="custom-shape-divider-bottom-1628237230" >
+        <div class="custom-shape-divider-bottom-1628237230">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
           >
-            <path  
+            <path
               d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
               class="shape-fill"
             ></path>
           </svg>
         </div>
       </div>
-      <div  id="about">
-
+      <div class="w-full absolute bottom-16 bubbles flex justify-around items-center">
+        <img src="/bubble.png" alt="" class="opacity-0" />
+        <img src="/bubble.png" alt="" class="opacity-0" />
+        <img src="/bubble.png" alt="" class="opacity-0" />
+        <img src="/bubble.png" alt="" class="opacity-0" />
+        <img src="/bubble.png" alt="" class="opacity-0" />
+        <img src="/bubble.png" alt="" class="opacity-0" />
+        <img src="/bubble.png" alt="" class="opacity-0" />
+        <img src="/bubble.png" alt="" class="opacity-0" />
+        <img src="/bubble.png" alt="" class="opacity-0" />
+        <img src="/bubble.png" alt="" class="opacity-0" />
+        <img src="/bubble.png" alt="" class="opacity-0" />
       </div>
+      <div id="about"></div>
     </div>
-    <div class="content w-11/12 mx-auto " >
-      <div
-      
-        class="description flex flex-col md:flex-row justify-center w-full pb-8 mt-4"
-       
-      >
+    <div class="content w-11/12 mx-auto">
+      <div class="description flex flex-col md:flex-row justify-center w-full pb-8 mt-4">
         <div class="hidden lg:block lg:w-2/4">
           <img src="img.jpg" alt="" class="h-44 p-2 w-full" />
         </div>
         <div class="p-12 bg-gray-50 shadow-xl">
-          Hi, I am a web developer who is currently studying Computer Science
-          And Information Technology at Mount Annapurna Campus, Pokhara. I have
-          experience working in the company as a team member at Everart
-          Technology where I had worked on clients and in-house projects as a
-          Full Stack Developer. I am a guy who likes challenges in his work and
-          wants to deliver full potential in whatever work I do.
+          Hi, I am a web developer who is currently studying Computer Science And Information
+          Technology at Mount Annapurna Campus, Pokhara. I have experience working in the company as
+          a team member at Everart Technology where I had worked on clients and in-house projects as
+          a Full Stack Developer. I am a guy who likes challenges in his work and wants to deliver
+          full potential in whatever work I do.
         </div>
       </div>
       <div class="" id="skill">
@@ -224,14 +211,7 @@
       <div class="pb-24 md:pb-12" id="projects">
         <p class="text-5xl p-12 mx-auto text-center font-bold">Projects</p>
         <div
-          class="
-            grid grid-cols-1
-            gap-2
-            md:grid-cols-2
-            lg:grid-cols-3
-            gap-x-4 gap-y-12
-            lg:gap-y-24
-          "
+          class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12 lg:gap-y-24"
         >
           <div class="h-full">
             <div
@@ -250,21 +230,13 @@
               <img class="rounded-t-lg" src="projects/weather.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="
-                    hover:cursor-pointer
-                    mt-2
-                    text-gray-900
-                    font-bold
-                    text-2xl
-                    tracking-tight
-                  "
+                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
                 >
                   Weather web app in JavaScript
                 </h1>
                 <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
-                  A web application that uses API and shows the current weather
-                  of your surrounding using location according to longitutde and
-                  latitutde.
+                  A web application that uses API and shows the current weather of your surrounding
+                  using location according to longitutde and latitutde.
                 </p>
               </div>
             </div>
@@ -283,29 +255,17 @@
                 max-w-sm
               "
             >
-              <img
-                class="rounded-t-lg h-48 w-full"
-                src="projects/movie-web-app.PNG"
-                alt=""
-              />
+              <img class="rounded-t-lg h-48 w-full" src="projects/movie-web-app.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="
-                    hover:cursor-pointer
-                    mt-2
-                    text-gray-900
-                    font-bold
-                    text-2xl
-                    tracking-tight
-                  "
+                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
                 >
                   Movie Web App in Laravel + Livewire + TailwindCSS
                 </h1>
                 <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
-                  Movie Web Application which shows currently playing and
-                  popular movies and TV shows with the help themoviedb.org API .
-                  It Shows the trailer, actors, casts, rating, and many more of
-                  a specific movie. And can also search for the movie.
+                  Movie Web Application which shows currently playing and popular movies and TV
+                  shows with the help themoviedb.org API . It Shows the trailer, actors, casts,
+                  rating, and many more of a specific movie. And can also search for the movie.
                 </p>
               </div>
             </div>
@@ -324,29 +284,17 @@
                 max-w-sm
               "
             >
-              <img
-                class="rounded-t-lg h-auto w-full"
-                src="projects/jagir-nepal.PNG"
-                alt=""
-              />
+              <img class="rounded-t-lg h-auto w-full" src="projects/jagir-nepal.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="
-                    hover:cursor-pointer
-                    mt-2
-                    text-gray-900
-                    font-bold
-                    text-2xl
-                    tracking-tight
-                  "
+                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
                 >
                   Job Portal in Laravel + TailwindCSS
                 </h1>
                 <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
-                  Web Application where a job seeker can search for jobs
-                  according to their skills, location, category and apply to the
-                  jobs and employer can post a job vacancy and can mail the
-                  deserving applicants. Admin Panel, Login verification, Reset
+                  Web Application where a job seeker can search for jobs according to their skills,
+                  location, category and apply to the jobs and employer can post a job vacancy and
+                  can mail the deserving applicants. Admin Panel, Login verification, Reset
                   Password, and many features are included.
                 </p>
               </div>
@@ -366,28 +314,16 @@
                 max-w-sm
               "
             >
-              <img
-                class="rounded-t-lg h-64 w-full"
-                src="projects/anime.PNG"
-                alt=""
-              />
+              <img class="rounded-t-lg h-64 w-full" src="projects/anime.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="
-                    hover:cursor-pointer
-                    mt-2
-                    text-gray-900
-                    font-bold
-                    text-2xl
-                    tracking-tight
-                  "
+                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
                 >
                   Anime Search in Vue js
                 </h1>
                 <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
-                  A simple web application where you can search for anime that
-                  shows details and other information about that anime from the
-                  API.
+                  A simple web application where you can search for anime that shows details and
+                  other information about that anime from the API.
                 </p>
               </div>
             </div>
@@ -406,30 +342,18 @@
                 max-w-sm
               "
             >
-              <img
-                class="rounded-t-lg w-full h-64"
-                src="projects/lara-tube.PNG"
-                alt=""
-              />
+              <img class="rounded-t-lg w-full h-64" src="projects/lara-tube.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="
-                    hover:cursor-pointer
-                    mt-2
-                    text-gray-900
-                    font-bold
-                    text-2xl
-                    tracking-tight
-                  "
+                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
                 >
                   Lartube in Laravel + Vue
                 </h1>
                 <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
-                  YouTube clone application where a user has their channel and
-                  can upload videos while other users can like, unlike the
-                  video, reply to the video, reply to the comments of the video,
-                  and can also like/unlike the comments. Can search for video of
-                  a channel or a video name.
+                  YouTube clone application where a user has their channel and can upload videos
+                  while other users can like, unlike the video, reply to the video, reply to the
+                  comments of the video, and can also like/unlike the comments. Can search for video
+                  of a channel or a video name.
                 </p>
               </div>
             </div>
@@ -448,27 +372,15 @@
                 max-w-sm
               "
             >
-              <img
-                class="rounded-t-lg h-64 w-full"
-                src="projects/calculator.PNG"
-                alt=""
-              />
+              <img class="rounded-t-lg h-64 w-full" src="projects/calculator.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="
-                    hover:cursor-pointer
-                    mt-2
-                    text-gray-900
-                    font-bold
-                    text-2xl
-                    tracking-tight
-                  "
+                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
                 >
                   Calculator in JavaScript
                 </h1>
                 <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
-                  Calculator which performs basic operation of mathematics can
-                  cancel input numbers.
+                  Calculator which performs basic operation of mathematics can cancel input numbers.
                 </p>
               </div>
             </div>
@@ -487,36 +399,17 @@
         "
       >
         <div class="contact" id="contact">
-          <div
-            class="
-              max-w-md
-              py-4
-              px-8
-              bg-gray-100
-              shadow-2xl
-              rounded-lg
-              my-8
-              lg:my-20
-            "
-          >
+          <div class="max-w-md py-4 px-8 bg-gray-100 shadow-2xl rounded-lg my-8 lg:my-20">
             <div class="flex justify-center md:justify-end -mt-16">
               <img
-                class="
-                  w-20
-                  h-20
-                  object-cover
-                  rounded-full
-                  border-2 border-indigo-500
-                "
+                class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
                 src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
               />
             </div>
             <div class="space-y-4 mt-4">
               <div class="flex">
                 <img src="skills/mail.png" alt="" / class="h-8 w-8">
-                <p class="ml-2 text-sm md:text-base">
-                  AnishShrestha71@gmail.com
-                </p>
+                <p class="ml-2 text-sm md:text-base">AnishShrestha71@gmail.com</p>
               </div>
               <div class="flex">
                 <img src="skills/phone.png" alt="" / class="h-8 w-8">
@@ -524,83 +417,40 @@
               </div>
               <div class="flex">
                 <img src="skills/location.png" alt="" / class="h-8 w-8">
-                <p class="ml-2 text-sm md:text-base">
-                  Pokhara, Baglung-Buspark-2
-                </p>
+                <p class="ml-2 text-sm md:text-base">Pokhara, Baglung-Buspark-2</p>
               </div>
             </div>
           </div>
         </div>
         <div class="contact">
-          <div
-            class="
-              max-w-md
-              py-4
-              px-2
-              bg-gray-100
-              shadow-2xl
-              rounded-lg
-              my-8
-              lg:my-20
-            "
-          >
+          <div class="max-w-md py-4 px-2 bg-gray-100 shadow-2xl rounded-lg my-8 lg:my-20">
             <div class="flex justify-center md:justify-end -mt-16">
               <img
-                class="
-                  w-20
-                  h-20
-                  object-cover
-                  rounded-full
-                  border-2 border-indigo-500
-                "
+                class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
                 src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
               />
             </div>
             <div class="space-y-4 mt-4">
               <div class="flex">
                 <img src="skills/git.png" alt="" class="h-8 w-8" />
-                <p class="ml-2 text-sm md:text-base">
-                  https://github.com/AnishShrestha71
-                </p>
+                <p class="ml-2 text-sm md:text-base">https://github.com/AnishShrestha71</p>
               </div>
               <div class="flex">
                 <img src="skills/fb.png" alt="" class="h-8 w-8" />
-                <p class="ml-2 text-sm md:text-base">
-                  https://www.facebook.com/linkin.shrestha
-                </p>
+                <p class="ml-2 text-sm md:text-base">https://www.facebook.com/linkin.shrestha</p>
               </div>
               <div class="flex">
                 <img src="skills/insta.png" alt="" class="h-8 w-8" />
-                <p class="ml-2 text-sm md:text-base">
-                  https://www.instagram.com/linkiney/
-                </p>
+                <p class="ml-2 text-sm md:text-base">https://www.instagram.com/linkiney/</p>
               </div>
             </div>
           </div>
         </div>
         <div class="contact">
-          <div
-            class="
-              max-w-md
-              py-4
-              px-2
-              bg-gray-100
-              shadow-2xl
-              rounded-lg
-              my-8
-              lg:my-20
-              pb-10
-            "
-          >
+          <div class="max-w-md py-4 px-2 bg-gray-100 shadow-2xl rounded-lg my-8 lg:my-20 pb-10">
             <div class="flex justify-center md:justify-end -mt-16">
               <img
-                class="
-                  w-20
-                  h-20
-                  object-cover
-                  rounded-full
-                  border-2 border-indigo-500
-                "
+                class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
                 src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
               />
             </div>
@@ -616,9 +466,7 @@
                 </p>
               </div>
               <div class="flex">
-                <p class="ml-2 text-sm md:text-base">
-                  <b>Bachelor</b> : Mount Annapurna Campus
-                </p>
+                <p class="ml-2 text-sm md:text-base"><b>Bachelor</b> : Mount Annapurna Campus</p>
               </div>
             </div>
           </div>
@@ -676,8 +524,8 @@
   </script>
 
   <script>
-    $(window).on("load", function(){
+    $(window).on("load", function () {
       $(".loader-wrapper").fadeOut("slow");
-    })
+    });
   </script>
 </html>
