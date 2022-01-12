@@ -14,6 +14,7 @@ var cardColor = document.getElementsByClassName("card");
 var contact = document.getElementsByClassName("contactWrapper");
 var footer = document.getElementById("footer");
 var nightModeBtn = document.getElementById("switch");
+var burgerDiv = document.getElementsByClassName("burger-div");
 
 icon.addEventListener("click", function () {
   items.classList.toggle("hidden");
@@ -60,7 +61,7 @@ function hideMenu() {
 }
 //Night Mode
 
-function toggleNightMode() {
+function toggleNightMode() { //Night Mode
   if (nightModeBtn.checked == true) {
     headerColor.style.backgroundColor = "rgb(3 9 42)";
     svgFill.style.fill = "#161b22";
@@ -73,6 +74,7 @@ function toggleNightMode() {
     project.style.color = "rgb(249 250 251)";
     im.style.color = "rgb(235 64 64)";
     cv.style.color = "#fff";
+
     if (!items.classList.contains("hidden")) {
       if (items.classList.contains("bg-gray-200")) {
         items.classList.remove("bg-gray-200");
@@ -100,6 +102,12 @@ function toggleNightMode() {
       header.style.color = "#fff";
     }
     items.style.color = "#fff";
+    for (var i = 0, len = burgerDiv.length; i < len; i++) {
+      burgerDiv[i].style.backgroundColor = "#fff";     
+    }
+
+
+
   } else { //Light Mode
     headerColor.style.backgroundColor = "rgb(89, 89, 175)";
     svgFill.style.fill = "#fcfafa";
@@ -142,6 +150,12 @@ function toggleNightMode() {
       header.style.color = "#000";
     }
     items.style.color = "#000";
+
+    if(window.scrollY > 1){
+      for (var i = 0, len = burgerDiv.length; i < len; i++) {
+        burgerDiv[i].style.backgroundColor = "#000";     
+      }
+    }
   }
 }
 
@@ -151,7 +165,9 @@ window.addEventListener("scroll", function () {
 
   if (window.scrollY < 1 && items.classList.contains("hidden")) {
     header.classList.toggle("scroll-active", windowPosition);
-
+    for (var i = 0, len = burgerDiv.length; i < len; i++) {
+      burgerDiv[i].style.backgroundColor = "#fff";     
+    }
     menu.classList.remove("bg-gray-800");
     header.style.color = "#fff";
     if (!items.classList.contains("hidden")) {
@@ -163,15 +179,21 @@ window.addEventListener("scroll", function () {
     }
   } else if (items.classList.contains("hidden") == false) {
   } else {
+    
     header.classList.toggle("scroll-active", windowPosition);
     menu.classList.remove("bg-gray-200");
     header.style.color = "#000";
+    for (var i = 0, len = burgerDiv.length; i < len; i++) {
+      burgerDiv[i].style.backgroundColor = "#000";     
+    }
     if (nightModeBtn.checked == true && header.classList.contains("scroll-active")) {
       menu.classList.add("bg-gray-800");
       header.style.color = "#fff";
+      for (var i = 0, len = burgerDiv.length; i < len; i++) {
+        burgerDiv[i].style.backgroundColor = "#fff";     
+      }   
     }
     if (nightModeBtn.checked == false && header.classList.contains("scroll-active")) {
-     
       items.style.color = "#000";
     }
   }

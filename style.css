@@ -24,12 +24,12 @@ body {
 }
 .scroll-active {
   background-color: rgb(235, 229, 229);
-  color: black;
+  color: rgb(212, 196, 196);
   box-shadow: black;
 }
-.scroll-active .burger div {
+/* .scroll-active .burger div {
   background-color: black;
-}
+} */
 
 .burger {
   display: none;
