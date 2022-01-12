@@ -79,8 +79,9 @@ function toggleNightMode() {
       }
       items.classList.add("bg-gray-800");
       menu.classList.add("bg-gray-800");
-      items.style.color = "#fff";
+     
     }
+   
     for (var i = 0, len = cardColor.length; i < len; i++) {
       cardColor[i].style.backgroundColor = "#292a30";
       cardColor[i].style.color = "rgb(249 250 251)";
@@ -98,6 +99,7 @@ function toggleNightMode() {
       menu.classList.add("bg-gray-800");
       header.style.color = "#fff";
     }
+    items.style.color = "#fff";
   } else {
     headerColor.style.backgroundColor = "rgb(89, 89, 175)";
     svgFill.style.fill = "#fcfafa";
@@ -107,6 +109,7 @@ function toggleNightMode() {
     description[0].style.color = "#292a30";
     im.style.color = "#000";
     cv.style.color = "#000";
+    
     if(!items.classList.contains("hidden")){
       if (menu.classList.contains("bg-gray-800")) {
         menu.classList.remove("bg-gray-800");
@@ -119,8 +122,8 @@ function toggleNightMode() {
       }
       items.classList.add("bg-gray-200");
       menu.classList.add("bg-gray-200");
-      items.style.color = "#000";
     }
+  
     for (var i = 0, len = cardColor.length; i < len; i++) {
       cardColor[i].style.backgroundColor = "#fcfafa";
       cardColor[i].style.color = "#000";
@@ -137,6 +140,7 @@ function toggleNightMode() {
       menu.classList.remove("bg-gray-800");
       header.style.color = "#000";
     }
+    items.style.color = "#000";
   }
 }
 
