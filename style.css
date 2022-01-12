@@ -34,7 +34,17 @@ body {
 .burger {
   display: none;
 }
+.description{
+  background-color: rgb(249 250 251);
+  border-radius: 20px;
+}
+.contactWrapper{
+  background-color: rgb(243 244 246);
+}
 
+.cv:hover{
+  color: #f3f3f3 !important;
+}
 .burger div {
   height: 4px;
   width: 25px;
@@ -70,11 +80,11 @@ body {
     position: absolute;
     left: 0;
     margin-top: 38px;
-    background-color: rgb(229, 231, 235);
+    /* background-color: rgb(229, 231, 235); */
     text-align: center;
     width: 100%;
     padding-bottom: 4px;
-    color: black;
+    /* color: black; */
   }
 
   .burger {
@@ -127,6 +137,7 @@ body {
 .card {
   height: 510px;
   overflow-y: hidden;
+  background-color: "#fcfafa";
 }
 .loader-wrapper {
   height: 100%;
@@ -168,72 +179,136 @@ body {
   }
 }
 
-
-.bubbles img{
+.bubbles img {
   width: 30px;
   animation: bubble 5s linear infinite;
 }
 
-@keyframes bubble{
-  0%{
+@keyframes bubble {
+  0% {
     transform: translateY(0);
     opacity: 0;
   }
-  25%{
-    
+  25% {
     opacity: 1;
   }
-  50%{
-   
+  50% {
     opacity: 1;
   }
-  75%{
-   
+  75% {
     opacity: 1;
   }
-  100%{
+  100% {
     transform: translateY(-80vh);
     opacity: 0;
   }
-
 }
 
-.bubbles img:nth-child(1){
+.bubbles img:nth-child(1) {
   animation-delay: 2s;
-  
 }
-.bubbles img:nth-child(2){
+.bubbles img:nth-child(2) {
   animation-delay: 3s;
   width: 20px;
 }
-.bubbles img:nth-child(3){
+.bubbles img:nth-child(3) {
   animation-delay: 5s;
-  
 }
-.bubbles img:nth-child(4){
+.bubbles img:nth-child(4) {
   animation-delay: 3s;
 }
-.bubbles img:nth-child(5){
+.bubbles img:nth-child(5) {
   animation-delay: 4s;
   width: 35;
 }
-.bubbles img:nth-child(6){
+.bubbles img:nth-child(6) {
   animation-delay: 2.5s;
 }
-.bubbles img:nth-child(7){
+.bubbles img:nth-child(7) {
   animation-delay: 1s;
 }
-.bubbles img:nth-child(8){
+.bubbles img:nth-child(8) {
   animation-delay: 4s;
   width: 15px;
 }
-.bubbles img:nth-child(9){
+.bubbles img:nth-child(9) {
   animation-delay: 3s;
 }
-.bubbles img:nth-child(10){
+.bubbles img:nth-child(10) {
   animation-delay: 2.8s;
 }
-.bubbles img:nth-child(11){
+.bubbles img:nth-child(11) {
   animation-delay: 4s;
   width: 20px;
+}
+
+.switch {
+  position: fixed;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  bottom: 2%;
+  right: 2%;
+  z-index: 9997;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+  z-index: 10;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch img {
+  position: absolute;
+  height: 25px;
+  right: 1px;
+  top: 3px;
 }

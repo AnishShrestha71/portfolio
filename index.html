@@ -43,6 +43,11 @@
     <div class="loader-wrapper">
       <div class="loader"></div>
     </div>
+    <label class="switch" >
+      <input type="checkbox" id="switch" onclick="toggleNightMode()"/>
+      <span class="slider round"></span>
+      <img src="nightmode.png" alt="" />
+    </label>
     <div>
       <div class="header" id="home">
         <div class="menu fixed top-0 flex justify-between w-full p-2 z-50">
@@ -72,22 +77,10 @@
         </div>
         <div class="header-content flex items-center flex-col sm:flex-row relative z-10">
           <div
-          style="margin-top: -60px;"
-            class="
-              wrapper
-              flex flex-col
-              justify-center
-              items-center
-              w-full
-              md:w-1/2
-              pt-24
-              md:pt-0
-              
-              md:mt-12
-              lg:mt-0
-            "
+            style="margin-top: -60px"
+            class="wrapper flex flex-col justify-center items-center w-full md:w-1/2 pt-24 md:pt-0 md:mt-12 lg:mt-0"
           >
-            <div class="static-txt text-4xl lg:text-7xl font-bold mt-2 sm:mt-0">
+            <div class="static-txt text-4xl lg:text-7xl font-bold mt-2 sm:mt-0 Im">
               I'm a <span class="animate text-white"> </span>
             </div>
             <div>
@@ -96,20 +89,8 @@
                 target="_blank"
               >
                 <button
-                  class="
-                    bg-transparent
-                    hover:bg-blue
-                    text-black
-                    font-semibold
-                    hover:text-white
-                    py-2
-                    px-4
-                    text-xl
-                    mt-8
-                    border border-blue
-                    hover:text-gray-400
-                    rounded
-                  "
+            
+                  class="cv bg-transparent hover:bg-blue text-black font-semibold  py-2 px-4 text-xl mt-8 border border-blue rounded"
                 >
                   Download CV
                 </button>
@@ -136,10 +117,12 @@
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
+            id="waveSVG"
           >
             <path
               d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
               class="shape-fill"
+              id="shapeFill"
             ></path>
           </svg>
         </div>
@@ -160,11 +143,11 @@
       <div id="about"></div>
     </div>
     <div class="content w-11/12 mx-auto">
-      <div class="description flex flex-col md:flex-row justify-center w-full pb-8 mt-4">
-        <div class="hidden lg:block lg:w-2/4">
+      <div class="flex flex-col md:flex-row justify-center w-full pb-8 mt-4">
+        <!-- <div class="hidden lg:block lg:w-2/4">
           <img src="img.jpg" alt="" class="h-44 p-2 w-full" />
-        </div>
-        <div class="p-12 bg-gray-50 shadow-xl">
+        </div> -->
+        <div class="p-12 shadow-xl description" style="font-size: 18px;">
           Hi, I am a web developer who is currently studying Computer Science And Information
           Technology at Mount Annapurna Campus, Pokhara. I have experience working in the company as
           a team member at Everart Technology where I had worked on clients and in-house projects as
@@ -175,16 +158,7 @@
       <div class="" id="skill">
         <p class="text-5xl p-12 mx-auto text-center font-bold">My Skills</p>
         <div
-          class="
-            owl-carousel owl-theme
-            class-wrapper
-            flex flex-col
-            md:flex-row
-            space-y-8
-            md:space-x-12
-            justify-center
-            pb-12
-          "
+          class="owl-carousel owl-theme class-wrapper flex flex-col md:flex-row space-y-8 md:space-x-12 justify-center pb-12"
         >
           <div>
             <img src="skills/js.png" alt="" class="h-40 w-40 mx-auto" />
@@ -214,28 +188,18 @@
         <div
           class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12 lg:gap-y-24"
         >
-          <div class="h-full">
+          <div class="h-full ">
             <div
-              class="
-                card
-                bg-white
-                mx-auto
-                shadow-lg
-                rounded-lg
-                hover:shadow-xl
-                transition
-                duration-200
-                max-w-sm
-              "
+              class="card bg-white mx-auto shadow-lg rounded-lg hover:shadow-xl transition duration-200 max-w-sm"
             >
               <img class="rounded-t-lg" src="projects/weather.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
+                  class="hover:cursor-pointer mt-2  font-bold text-2xl tracking-tight"
                 >
                   Weather web app in JavaScript
                 </h1>
-                <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+                <p class="hover:cursor-pointer py-3 leading-6">
                   A web application that uses API and shows the current weather of your surrounding
                   using location according to longitutde and latitutde.
                 </p>
@@ -244,26 +208,16 @@
           </div>
           <div class="">
             <div
-              class="
-                card
-                bg-white
-                mx-auto
-                shadow-lg
-                rounded-lg
-                hover:shadow-xl
-                transition
-                duration-200
-                max-w-sm
-              "
+              class="card bg-white mx-auto shadow-lg rounded-lg hover:shadow-xl transition duration-200 max-w-sm"
             >
               <img class="rounded-t-lg h-48 w-full" src="projects/movie-web-app.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
+                  class="hover:cursor-pointer mt-2  font-bold text-2xl tracking-tight"
                 >
                   Movie Web App in Laravel + Livewire + TailwindCSS
                 </h1>
-                <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+                <p class="hover:cursor-pointer py-3  leading-6">
                   Movie Web Application which shows currently playing and popular movies and TV
                   shows with the help themoviedb.org API . It Shows the trailer, actors, casts,
                   rating, and many more of a specific movie. And can also search for the movie.
@@ -273,26 +227,16 @@
           </div>
           <div class="">
             <div
-              class="
-                card
-                bg-white
-                mx-auto
-                shadow-lg
-                rounded-lg
-                hover:shadow-xl
-                transition
-                duration-200
-                max-w-sm
-              "
+              class="card bg-white mx-auto shadow-lg rounded-lg hover:shadow-xl transition duration-200 max-w-sm"
             >
               <img class="rounded-t-lg h-auto w-full" src="projects/jagir-nepal.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
+                  class="hover:cursor-pointer mt-2  font-bold text-2xl tracking-tight"
                 >
                   Job Portal in Laravel + TailwindCSS
                 </h1>
-                <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+                <p class="hover:cursor-pointer py-3  leading-6">
                   Web Application where a job seeker can search for jobs according to their skills,
                   location, category and apply to the jobs and employer can post a job vacancy and
                   can mail the deserving applicants. Admin Panel, Login verification, Reset
@@ -303,26 +247,16 @@
           </div>
           <div class="">
             <div
-              class="
-                card
-                bg-white
-                mx-auto
-                shadow-lg
-                rounded-lg
-                hover:shadow-xl
-                transition
-                duration-200
-                max-w-sm
-              "
+              class="card bg-white mx-auto shadow-lg rounded-lg hover:shadow-xl transition duration-200 max-w-sm"
             >
               <img class="rounded-t-lg h-64 w-full" src="projects/anime.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
+                  class="hover:cursor-pointer mt-2  font-bold text-2xl tracking-tight"
                 >
                   Anime Search in Vue js
                 </h1>
-                <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+                <p class="hover:cursor-pointer py-3 leading-6">
                   A simple web application where you can search for anime that shows details and
                   other information about that anime from the API.
                 </p>
@@ -331,26 +265,16 @@
           </div>
           <div class="">
             <div
-              class="
-                card
-                bg-white
-                mx-auto
-                shadow-lg
-                rounded-lg
-                hover:shadow-xl
-                transition
-                duration-200
-                max-w-sm
-              "
+              class="card bg-white mx-auto shadow-lg rounded-lg hover:shadow-xl transition duration-200 max-w-sm"
             >
               <img class="rounded-t-lg w-full h-64" src="projects/lara-tube.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
+                  class="hover:cursor-pointer mt-2  font-bold text-2xl tracking-tight"
                 >
                   Lartube in Laravel + Vue
                 </h1>
-                <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+                <p class="hover:cursor-pointer py-3 leading-6">
                   YouTube clone application where a user has their channel and can upload videos
                   while other users can like, unlike the video, reply to the video, reply to the
                   comments of the video, and can also like/unlike the comments. Can search for video
@@ -361,26 +285,16 @@
           </div>
           <div class="">
             <div
-              class="
-                card
-                bg-white
-                mx-auto
-                shadow-lg
-                rounded-lg
-                hover:shadow-xl
-                transition
-                duration-200
-                max-w-sm
-              "
+              class="card bg-white mx-auto shadow-lg rounded-lg hover:shadow-xl transition duration-200 max-w-sm"
             >
               <img class="rounded-t-lg h-64 w-full" src="projects/calculator.PNG" alt="" />
               <div class="py-4 px-8">
                 <h1
-                  class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight"
+                  class="hover:cursor-pointer mt-2  font-bold text-2xl tracking-tight"
                 >
                   Calculator in JavaScript
                 </h1>
-                <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+                <p class="hover:cursor-pointer py-3 leading-6">
                   Calculator which performs basic operation of mathematics can cancel input numbers.
                 </p>
               </div>
@@ -389,18 +303,10 @@
         </div>
       </div>
       <div
-        class="
-          flex
-          lg:space-x-12
-          flex-col
-          lg:flex-row
-          justify-center
-          sm:items-center
-          md:items-start
-        "
+        class="flex lg:space-x-12 flex-col lg:flex-row justify-center sm:items-center md:items-start"
       >
         <div class="contact" id="contact">
-          <div class="max-w-md py-4 px-8 bg-gray-100 shadow-2xl rounded-lg my-8 lg:my-20">
+          <div class="max-w-md py-4 px-8 contactWrapper shadow-2xl rounded-lg my-8 lg:my-20">
             <div class="flex justify-center md:justify-end -mt-16">
               <img
                 class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
@@ -424,7 +330,7 @@
           </div>
         </div>
         <div class="contact">
-          <div class="max-w-md py-4 px-2 bg-gray-100 shadow-2xl rounded-lg my-8 lg:my-20">
+          <div class="max-w-md py-4 px-2 contactWrapper shadow-2xl rounded-lg my-8 lg:my-20">
             <div class="flex justify-center md:justify-end -mt-16">
               <img
                 class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
@@ -448,7 +354,7 @@
           </div>
         </div>
         <div class="contact">
-          <div class="max-w-md py-4 px-2 bg-gray-100 shadow-2xl rounded-lg my-8 lg:my-20 pb-10">
+          <div class="max-w-md py-4 px-2 contactWrapper shadow-2xl rounded-lg my-8 lg:my-20 pb-10">
             <div class="flex justify-center md:justify-end -mt-16">
               <img
                 class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
@@ -474,7 +380,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-gray-100 h-8">
+    <div class="h-8" id="footer">
       <p class="text-center">&copy; Developed By: Anish Shrestha</p>
     </div>
   </body>
