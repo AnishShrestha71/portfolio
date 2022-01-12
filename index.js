@@ -100,7 +100,7 @@ function toggleNightMode() {
       header.style.color = "#fff";
     }
     items.style.color = "#fff";
-  } else {
+  } else { //Light Mode
     headerColor.style.backgroundColor = "rgb(89, 89, 175)";
     svgFill.style.fill = "#fcfafa";
     svgPath.style.fill = "#fcfafa";
@@ -136,6 +136,7 @@ function toggleNightMode() {
     footer.style.backgroundColor = "rgb(243 244 246)";
     footer.style.color = "#000";
     if (window.scrollY < 1 && items.classList.contains("hidden")) {
+     
     } else {
       menu.classList.remove("bg-gray-800");
       header.style.color = "#000";
@@ -156,6 +157,10 @@ window.addEventListener("scroll", function () {
     if (!items.classList.contains("hidden")) {
       items.style.color = "#000";
     }
+    if (nightModeBtn.checked == false && !header.classList.contains("scroll-active")) {
+     
+      items.style.color = "#fff";
+    }
   } else if (items.classList.contains("hidden") == false) {
   } else {
     header.classList.toggle("scroll-active", windowPosition);
@@ -164,6 +169,10 @@ window.addEventListener("scroll", function () {
     if (nightModeBtn.checked == true && header.classList.contains("scroll-active")) {
       menu.classList.add("bg-gray-800");
       header.style.color = "#fff";
+    }
+    if (nightModeBtn.checked == false && header.classList.contains("scroll-active")) {
+     
+      items.style.color = "#000";
     }
   }
 });
