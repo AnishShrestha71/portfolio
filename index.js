@@ -43,7 +43,8 @@ icon.addEventListener("click", function () {
     }
   } else if (window.scrollY < 1 && items.classList.contains("hidden")) {
     menu.classList.remove("bg-gray-200");
-    console.log("hi");
+    menu.classList.remove("bg-gray-800");
+    
     header.classList.remove("scroll-active");
   }
 });
@@ -95,8 +96,11 @@ function toggleNightMode() { //Night Mode
 
     footer.style.backgroundColor = "#161b22";
     footer.style.color = "rgb(249 250 251)";
-
+    console.log(window.scrollY)
     if (window.scrollY < 1 && items.classList.contains("hidden")) {
+      if (items.classList.contains("bg-gray-800")) {
+        items.classList.remove("bg-gray-800");
+      }
     } else {
       menu.classList.add("bg-gray-800");
       header.style.color = "#fff";
@@ -115,6 +119,8 @@ function toggleNightMode() { //Night Mode
     document.body.style.backgroundColor = "#fcfafa";
     description[0].style.backgroundColor = "rgb(249 250 251)";
     description[0].style.color = "#292a30";
+    skill.style.color = "#000";
+    project.style.color = "#000";
     im.style.color = "#000";
     cv.style.color = "#000";
     
