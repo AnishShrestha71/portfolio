@@ -34,15 +34,15 @@ body {
 .burger {
   display: none;
 }
-.description{
+.description {
   background-color: rgb(249 250 251);
   border-radius: 20px;
 }
-.contactWrapper{
+.contactWrapper {
   background-color: rgb(243 244 246);
 }
 
-.cv:hover{
+.cv:hover {
   color: #f3f3f3 !important;
 }
 .burger div {
@@ -74,6 +74,23 @@ body {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.li-trans {
+  transition: height 0.2s linear;
+  overflow-y: hidden !important;
+}
+.ul-div {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.ul-div li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+.ul-div li:last-child {
+  border-bottom: hidden;
 }
 @media screen and (max-width: 767px) {
   .menu ul {

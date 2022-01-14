@@ -15,9 +15,18 @@ var contact = document.getElementsByClassName("contactWrapper");
 var footer = document.getElementById("footer");
 var nightModeBtn = document.getElementById("switch");
 var burgerDiv = document.getElementsByClassName("burger-div");
+// var menuHeight = document.
 
 icon.addEventListener("click", function () {
   items.classList.toggle("hidden");
+  items.classList.toggle("li-trans");
+  if (items.classList.contains("li-trans")) {
+    setTimeout(() => {
+      items.style.height = "225px";
+    }, 200);
+  } else {
+    items.style.height = "0px";
+  }
   icon.classList.toggle("toggle");
   if (nightModeBtn.checked == true) {
     if (items.classList.contains("bg-gray-200")) {
@@ -38,13 +47,13 @@ icon.addEventListener("click", function () {
     menu.classList.add("bg-gray-200");
     if (nightModeBtn.checked == false) {
       items.style.color = "#000";
-    }else{
+    } else {
       items.style.color = "#fff";
     }
   } else if (window.scrollY < 1 && items.classList.contains("hidden")) {
     menu.classList.remove("bg-gray-200");
     menu.classList.remove("bg-gray-800");
-    
+
     header.classList.remove("scroll-active");
   }
 });
@@ -62,7 +71,8 @@ function hideMenu() {
 }
 //Night Mode
 
-function toggleNightMode() { //Night Mode
+function toggleNightMode() {
+  //Night Mode
   if (nightModeBtn.checked == true) {
     headerColor.style.backgroundColor = "rgb(3 9 42)";
     svgFill.style.fill = "#161b22";
@@ -82,9 +92,8 @@ function toggleNightMode() { //Night Mode
       }
       items.classList.add("bg-gray-800");
       menu.classList.add("bg-gray-800");
-     
     }
-   
+
     for (var i = 0, len = cardColor.length; i < len; i++) {
       cardColor[i].style.backgroundColor = "#292a30";
       cardColor[i].style.color = "rgb(249 250 251)";
@@ -96,7 +105,7 @@ function toggleNightMode() { //Night Mode
 
     footer.style.backgroundColor = "#161b22";
     footer.style.color = "rgb(249 250 251)";
-    console.log(window.scrollY)
+    console.log(window.scrollY);
     if (window.scrollY < 1 && items.classList.contains("hidden")) {
       if (items.classList.contains("bg-gray-800")) {
         items.classList.remove("bg-gray-800");
@@ -107,12 +116,10 @@ function toggleNightMode() { //Night Mode
     }
     items.style.color = "#fff";
     for (var i = 0, len = burgerDiv.length; i < len; i++) {
-      burgerDiv[i].style.backgroundColor = "#fff";     
+      burgerDiv[i].style.backgroundColor = "#fff";
     }
-
-
-
-  } else { //Light Mode
+  } else {
+    //Light Mode
     headerColor.style.backgroundColor = "rgb(89, 89, 175)";
     svgFill.style.fill = "#fcfafa";
     svgPath.style.fill = "#fcfafa";
@@ -123,8 +130,8 @@ function toggleNightMode() { //Night Mode
     project.style.color = "#000";
     im.style.color = "#000";
     cv.style.color = "#000";
-    
-    if(!items.classList.contains("hidden")){
+
+    if (!items.classList.contains("hidden")) {
       if (menu.classList.contains("bg-gray-800")) {
         menu.classList.remove("bg-gray-800");
       }
@@ -137,7 +144,7 @@ function toggleNightMode() { //Night Mode
       items.classList.add("bg-gray-200");
       menu.classList.add("bg-gray-200");
     }
-  
+
     for (var i = 0, len = cardColor.length; i < len; i++) {
       cardColor[i].style.backgroundColor = "#fcfafa";
       cardColor[i].style.color = "#000";
@@ -150,16 +157,15 @@ function toggleNightMode() { //Night Mode
     footer.style.backgroundColor = "rgb(243 244 246)";
     footer.style.color = "#000";
     if (window.scrollY < 1 && items.classList.contains("hidden")) {
-     
     } else {
       menu.classList.remove("bg-gray-800");
       header.style.color = "#000";
     }
     items.style.color = "#000";
 
-    if(window.scrollY > 1){
+    if (window.scrollY > 1) {
       for (var i = 0, len = burgerDiv.length; i < len; i++) {
-        burgerDiv[i].style.backgroundColor = "#000";     
+        burgerDiv[i].style.backgroundColor = "#000";
       }
     }
   }
@@ -172,7 +178,7 @@ window.addEventListener("scroll", function () {
   if (window.scrollY < 1 && items.classList.contains("hidden")) {
     header.classList.toggle("scroll-active", windowPosition);
     for (var i = 0, len = burgerDiv.length; i < len; i++) {
-      burgerDiv[i].style.backgroundColor = "#fff";     
+      burgerDiv[i].style.backgroundColor = "#fff";
     }
     menu.classList.remove("bg-gray-800");
     header.style.color = "#fff";
@@ -180,24 +186,22 @@ window.addEventListener("scroll", function () {
       items.style.color = "#000";
     }
     if (nightModeBtn.checked == false && !header.classList.contains("scroll-active")) {
-     
       items.style.color = "#fff";
     }
   } else if (items.classList.contains("hidden") == false) {
   } else {
-    
     header.classList.toggle("scroll-active", windowPosition);
     menu.classList.remove("bg-gray-200");
     header.style.color = "#000";
     for (var i = 0, len = burgerDiv.length; i < len; i++) {
-      burgerDiv[i].style.backgroundColor = "#000";     
+      burgerDiv[i].style.backgroundColor = "#000";
     }
     if (nightModeBtn.checked == true && header.classList.contains("scroll-active")) {
       menu.classList.add("bg-gray-800");
       header.style.color = "#fff";
       for (var i = 0, len = burgerDiv.length; i < len; i++) {
-        burgerDiv[i].style.backgroundColor = "#fff";     
-      }   
+        burgerDiv[i].style.backgroundColor = "#fff";
+      }
     }
     if (nightModeBtn.checked == false && header.classList.contains("scroll-active")) {
       items.style.color = "#000";
