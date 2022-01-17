@@ -76,9 +76,9 @@ body {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.li-trans {
+/* .li-trans {
   transition: height 0.2s linear;
-}
+} */
 .ul-div {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -88,6 +88,7 @@ body {
   .ul-div {
     height: 0px;
     overflow-y: hidden;
+    transition: height 0.2s linear;
   }
   .ul-div li {
     padding-top: 0.5rem;

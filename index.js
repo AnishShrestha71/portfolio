@@ -21,10 +21,10 @@ function menuBox() {
   if (document.documentElement.clientWidth < 767) {
     items.classList.toggle("hidden");
     items.classList.toggle("li-trans");
-    if (items.classList.contains("li-trans")) {
+    if (!items.classList.contains("hidden")) {
       setTimeout(() => {
-        items.style.height = "225px";
-      }, 200);
+        items.style.height = "14.2rem";
+      }, 100);
     } else {
       items.style.height = "0px";
     }
