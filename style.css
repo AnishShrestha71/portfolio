@@ -78,17 +78,24 @@ body {
 
 .li-trans {
   transition: height 0.2s linear;
-  overflow-y: hidden !important;
 }
 .ul-div {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
 }
-.ul-div li {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ccc;
+
+@media screen and (max-width: 767px) {
+  .ul-div {
+    height: 0px;
+    overflow-y: hidden;
+  }
+  .ul-div li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
 }
+
 .ul-div li:last-child {
   border-bottom: hidden;
 }
