@@ -15,18 +15,50 @@ var contact = document.getElementsByClassName("contactWrapper");
 var footer = document.getElementById("footer");
 var nightModeBtn = document.getElementById("switch");
 var burgerDiv = document.getElementsByClassName("burger-div");
+var overlay = document.getElementById("overlay");
 // var menuHeight = document.
 
 function menuBox() {
   if (document.documentElement.clientWidth < 767) {
-    items.classList.toggle("hidden");
+    
     items.classList.toggle("li-trans");
     if (!items.classList.contains("hidden")) {
+     setTimeout(() => {
+      items.style.height = "0cm";
+    
+      
+     }, 100);
+       
+     
       setTimeout(() => {
-        items.style.height = "14.2rem";
-      }, 100);
+        items.classList.toggle("hidden");
+        document.body.style.overflowY = "scroll";
+        overlay.style.display = "none";
+        if (window.scrollY < 1 && items.classList.contains("hidden") == false) {
+          menu.classList.add("bg-gray-200");
+          if (nightModeBtn.checked == false) {
+            items.style.color = "#000";
+          } else {
+            items.style.color = "#fff";
+          }
+        } else if (window.scrollY < 1 && items.classList.contains("hidden")) {
+          menu.classList.remove("bg-gray-200");
+          menu.classList.remove("bg-gray-800");
+    
+          header.classList.remove("scroll-active");
+        }
+      }, 400);
+      
+      console.log('hide')
     } else {
-      items.style.height = "0px";
+      setTimeout(() => {
+        items.style.height = "6cm";
+        document.body.style.overflowY = "hidden"
+       
+        overlay.style.display = "block";
+      }, 200);
+      items.classList.toggle("hidden");
+      console.log('show')
     }
     icon.classList.toggle("toggle");
     if (nightModeBtn.checked == true) {
