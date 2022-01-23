@@ -24,7 +24,7 @@ function menuBox() {
     items.classList.toggle("li-trans");
     if (!items.classList.contains("hidden")) {
      setTimeout(() => {
-      items.style.height = "0cm";
+      items.style.height = "0vh";
     
       
      }, 100);
@@ -52,7 +52,7 @@ function menuBox() {
       console.log('hide')
     } else {
       setTimeout(() => {
-        items.style.height = "6cm";
+        items.style.height = "35vh";
         document.body.style.overflowY = "hidden"
        
         overlay.style.display = "block";
