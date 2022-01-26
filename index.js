@@ -52,7 +52,7 @@ function menuBox() {
       console.log('hide')
     } else {
       setTimeout(() => {
-        items.style.height = "35vh";
+        items.style.height = "34vh";
         document.body.style.overflowY = "hidden"
        
         overlay.style.display = "block";
