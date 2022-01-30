@@ -17,7 +17,9 @@ var nightModeBtn = document.getElementById("switch");
 var burgerDiv = document.getElementsByClassName("burger-div");
 var overlay = document.getElementById("overlay");
 // var menuHeight = document.
-
+window.onload = function() {
+ document.body.style.overflowY = "scroll";
+};
 function menuBox() {
   if (document.documentElement.clientWidth < 767) {
     
