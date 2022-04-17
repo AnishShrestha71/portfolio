@@ -19,6 +19,7 @@ body {
 }
 .menu {
   color: white;
+  transition: all .5s;
 }
 .image {
   height: 22rem;
@@ -105,24 +106,26 @@ body {
     transition: height 0.2s linear;
   }
   .ul-div li {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+    
+    /* border-bottom: 1px solid #ccc; */
   }
 }
 
-.ul-div li:last-child {
+/* .ul-div li:last-child {
   border-bottom: hidden;
-}
+} */
 @media screen and (max-width: 767px) {
   .menu ul {
-    position: absolute;
-    left: 0;
+    position: fixed;
+    right: -100%;
+    height: 100%;
     margin-top: 38px;
     /* background-color: rgb(229, 231, 235); */
     text-align: center;
     width: 100%;
     padding-bottom: 4px;
+    transition: all .5s;
     /* color: black; */
   }
 

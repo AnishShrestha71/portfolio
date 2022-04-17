@@ -24,26 +24,28 @@ function menuBox() {
   if (document.documentElement.clientWidth < 767) {
     
     items.classList.toggle("li-trans");
-    if (!items.classList.contains("hidden")) {
-     setTimeout(() => {
-      items.style.height = "0rem";
+    if (!items.classList.contains("show")) {
+    //  setTimeout(() => {
+    //   items.style.height = "0rem";
     
       
-     }, 100);
+    //  }, 100);
        
      
+    items.classList.toggle("show");
+    items.style.right = "-100%";
+    overlay.style.display = "none";
       setTimeout(() => {
-        items.classList.toggle("hidden");
         document.body.style.overflowY = "scroll";
-        overlay.style.display = "none";
-        if (window.scrollY < 1 && items.classList.contains("hidden") == false) {
+
+        if (window.scrollY < 1 && items.classList.contains("show") == false) {
           menu.classList.add("bg-gray-200");
           if (nightModeBtn.checked == false) {
             items.style.color = "#000";
           } else {
             items.style.color = "#fff";
           }
-        } else if (window.scrollY < 1 && items.classList.contains("hidden")) {
+        } else if (window.scrollY < 1 && items.classList.contains("show")) {
           menu.classList.remove("bg-gray-200");
           menu.classList.remove("bg-gray-800");
     
@@ -51,15 +53,13 @@ function menuBox() {
         }
       }, 400);
       
-      console.log('hide')
+   
     } else {
-      setTimeout(() => {
-        items.style.height = "14.5rem";
-        document.body.style.overflowY = "hidden"
-       
-        overlay.style.display = "block";
-      }, 200);
-      items.classList.toggle("hidden");
+      items.style.right = "0%";
+      overlay.style.display = "block";
+      document.body.style.overflowY = "hidden"
+     
+      items.classList.toggle("show");
       console.log('show')
     }
     icon.classList.toggle("toggle");
@@ -78,14 +78,14 @@ function menuBox() {
       menu.classList.add("bg-gray-200");
       console.log("light");
     }
-    if (window.scrollY < 1 && items.classList.contains("hidden") == false) {
+    if (window.scrollY < 1 && items.classList.contains("show") == false) {
       menu.classList.add("bg-gray-200");
       if (nightModeBtn.checked == false) {
         items.style.color = "#000";
       } else {
         items.style.color = "#fff";
       }
-    } else if (window.scrollY < 1 && items.classList.contains("hidden")) {
+    } else if (window.scrollY < 1 && items.classList.contains("show")) {
       menu.classList.remove("bg-gray-200");
       menu.classList.remove("bg-gray-800");
 
@@ -98,8 +98,8 @@ icon.addEventListener("click", function () {
 });
 
 function hideMenu() {
-  if (items.classList.contains("hidden") == false) {
-    items.classList.add("hidden");
+  if (items.classList.contains("show") == false) {
+    items.classList.add("show");
     items.classList.remove("flex");
     if (window.scrollY < 1) {
       menu.classList.remove("bg-gray-200");
@@ -216,20 +216,20 @@ window.addEventListener("scroll", function () {
   let header = document.querySelector(".menu");
   let windowPosition = window.scrollY > 1;
 
-  if (window.scrollY < 1 && items.classList.contains("hidden")) {
+  if (window.scrollY < 1 && items.classList.contains("show")) {
     header.classList.toggle("scroll-active", windowPosition);
     for (var i = 0, len = burgerDiv.length; i < len; i++) {
       burgerDiv[i].style.backgroundColor = "#fff";
     }
     menu.classList.remove("bg-gray-800");
     header.style.color = "#fff";
-    if (!items.classList.contains("hidden")) {
+    if (!items.classList.contains("show")) {
       items.style.color = "#000";
     }
     if (nightModeBtn.checked == false && !header.classList.contains("scroll-active")) {
       items.style.color = "#fff";
     }
-  } else if (items.classList.contains("hidden") == false) {
+  } else if (items.classList.contains("show") == false) {
   } else {
     header.classList.toggle("scroll-active", windowPosition);
     menu.classList.remove("bg-gray-200");
