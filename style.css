@@ -19,11 +19,44 @@ body {
 }
 .menu {
   color: white;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .image {
   height: 22rem;
+  left: 0%;
+  right: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  top: 25%;
+  -webkit-animation: floatUpDown 5s linear infinite;
+  animation: floatUpDown 5s linear infinite;
 }
+
+@media (max-width:768px) {
+  .image{
+    top: 0%;
+   
+  
+  }
+}
+@keyframes floatUpDown {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .scroll-active {
   background-color: rgb(235, 229, 229);
   color: rgb(212, 196, 196);
@@ -76,7 +109,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
   z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }
@@ -107,7 +140,7 @@ body {
   }
   .ul-div li {
     padding: 0.5rem 0;
-    
+
     /* border-bottom: 1px solid #ccc; */
   }
 }
@@ -125,7 +158,7 @@ body {
     text-align: center;
     width: 100%;
     padding-bottom: 4px;
-    transition: all .5s;
+    transition: all 0.5s;
     /* color: black; */
   }
 
