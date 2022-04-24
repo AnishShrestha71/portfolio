@@ -85,6 +85,7 @@ body {
   width: 25px;
   margin: 4px;
   background-color: white;
+  transition: transform .4s;
 }
 .wrapper .dynamic-txts {
   margin-left: 15px;
