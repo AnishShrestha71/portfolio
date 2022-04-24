@@ -160,6 +160,7 @@ body {
     padding-bottom: 4px;
     transition: all 0.5s;
     /* color: black; */
+    will-change: right;
   }
 
   .burger {
