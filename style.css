@@ -131,6 +131,7 @@ body {
 .ul-div {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
+  transition: all .5s;
 }
 
 @media screen and (max-width: 767px) {

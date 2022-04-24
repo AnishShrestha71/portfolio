@@ -88,7 +88,6 @@ function menuBox() {
     } else if (window.scrollY < 1 && items.classList.contains("show")) {
       menu.classList.remove("bg-gray-200");
       menu.classList.remove("bg-gray-800");
-
       header.classList.remove("scroll-active");
     }
   }
@@ -246,6 +245,13 @@ window.addEventListener("scroll", function () {
     }
     if (nightModeBtn.checked == false && header.classList.contains("scroll-active")) {
       items.style.color = "#000";
+    }
+    if(screen.width > 768 && (items.classList.contains("bg-gray-200") || items.classList.contains("bg-gray-800"))){
+      if(items.classList.contains("bg-gray-200")){
+        items.classList.remove("bg-gray-200")
+      }else if(items.classList.contains("bg-gray-800")){
+        items.classList.remove("bg-gray-800")
+      }
     }
   }
 });
