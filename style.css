@@ -32,11 +32,9 @@ body {
   animation: floatUpDown 5s linear infinite;
 }
 
-@media (max-width:768px) {
-  .image{
+@media (max-width: 768px) {
+  .image {
     top: 0%;
-   
-  
   }
 }
 @keyframes floatUpDown {
@@ -85,7 +83,7 @@ body {
   width: 25px;
   margin: 4px;
   background-color: white;
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 .wrapper .dynamic-txts {
   margin-left: 15px;
@@ -131,7 +129,7 @@ body {
 .ul-div {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 @media screen and (max-width: 767px) {
@@ -194,7 +192,7 @@ body {
 }
 .custom-shape-divider-bottom-1628237230 {
   position: absolute;
-  bottom: 0;
+  bottom: -1%;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -390,3 +388,94 @@ input:checked + .slider:before {
   right: 1px;
   top: 3px;
 }
+
+.jelly-swim {
+  position: absolute;
+  animation: swimaround 120s linear infinite;
+  width: 80px;
+  bottom: 10%;
+  left: 0;
+}
+/* jelly fish animate starts here */
+@keyframes swimaround {
+  0% {
+    rotate: 85deg;
+    bottom: 10%;
+    left: 0;
+  }
+  8% {
+    left: 90%;
+    bottom: 30%;
+    rotate: 85deg;
+  }
+  10% {
+    left: 90%;
+    bottom: 30%;
+    rotate: 325deg;
+  }
+  15% {
+    rotate: 345deg;
+  }
+  25% {
+    left: 50%;
+    bottom: 50%;
+    rotate: 360deg;
+  }
+  28% {
+    left: 50%;
+    bottom: 50%;
+    rotate: 0deg;
+  }
+  32% {
+    left: 50%;
+    bottom: 50%;
+    rotate: 325deg;
+  }
+  45% {
+    left: 0%;
+    bottom: 70%;
+    rotate: 325deg;
+  }
+  55% {
+    left: 0%;
+    bottom: 70%;
+    rotate: 0deg;
+  }
+  58% {
+    rotate: 90deg;
+    bottom: 70%;
+  }
+  75% {
+    left: 90%;
+    bottom: 70%;
+    rotate: 90deg;
+  }
+  78% {
+    left: 90%;
+    rotate: 238deg;
+  }
+  85% {
+    left: 40%;
+    bottom: 30%;
+    rotate: 238deg;
+  }
+  87% {
+    left: 40%;
+    bottom: 30%;
+    rotate: 498deg;
+  }
+  88% {
+    left: 40%;
+    bottom: 30%;
+    rotate: 598deg;
+  }
+  98% {
+    rotate: 598deg;
+  }
+  100% {
+    rotate: 85deg;
+    bottom: 10%;
+    left: 0;
+  }
+}
+/* jelly fish animate ends here */
