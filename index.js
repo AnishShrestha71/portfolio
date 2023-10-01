@@ -124,7 +124,7 @@ function toggleNightMode() {
     skill.style.color = "rgb(249 250 251)";
     project.style.color = "rgb(249 250 251)";
     im.style.color = "rgb(235 64 64)";
-    cv.style.color = "#fff";
+    // cv.style.color = "#fff";
 
     if (!items.classList.contains("hidden")) {
       if (items.classList.contains("bg-gray-200")) {
@@ -169,7 +169,7 @@ function toggleNightMode() {
     skill.style.color = "#000";
     project.style.color = "#000";
     im.style.color = "#000";
-    cv.style.color = "#000";
+    // cv.style.color = "#000";
 
     if (!items.classList.contains("hidden")) {
       if (menu.classList.contains("bg-gray-800")) {

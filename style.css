@@ -1,3 +1,6 @@
+:root{
+  --jellyMostLeft: 90%
+}
 * {
   margin: 0;
   padding: 0;
@@ -149,6 +152,9 @@ body {
   border-bottom: hidden;
 } */
 @media screen and (max-width: 767px) {
+  :root{
+    --jellyMostLeft: 75%
+  }
   .menu ul {
     position: fixed;
     right: -100%;
@@ -399,81 +405,97 @@ input:checked + .slider:before {
 /* jelly fish animate starts here */
 @keyframes swimaround {
   0% {
-    rotate: 85deg;
+    transform: rotate(85deg);
+    -webkit-transform: rotate(85deg);
     bottom: 10%;
     left: 0;
   }
   8% {
-    left: 90%;
+    left: var(--jellyMostLeft);
     bottom: 30%;
-    rotate: 85deg;
+    transform: rotate(85deg);
+    -webkit-transform: rotate(85deg);
   }
   10% {
-    left: 90%;
+    left: var(--jellyMostLeft);
     bottom: 30%;
-    rotate: 325deg;
+    transform: rotate(325deg);
+    -webkit-transform: rotate(325deg);
   }
   15% {
-    rotate: 345deg;
+    transform: rotate(345deg);
+    -webkit-transform: rotate(345deg);
   }
   25% {
     left: 50%;
     bottom: 50%;
-    rotate: 360deg;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
   28% {
     left: 50%;
     bottom: 50%;
-    rotate: 0deg;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
   32% {
     left: 50%;
     bottom: 50%;
-    rotate: 325deg;
+    transform: rotate(325deg);
+    -webkit-transform: rotate(325deg);
   }
   45% {
     left: 0%;
     bottom: 70%;
-    rotate: 325deg;
+    transform: rotate(325deg);
+    -webkit-transform: rotate(325deg);
   }
   55% {
     left: 0%;
     bottom: 70%;
-    rotate: 0deg;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
   58% {
-    rotate: 90deg;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
     bottom: 70%;
   }
   75% {
-    left: 90%;
+    left: var(--jellyMostLeft);
     bottom: 70%;
-    rotate: 90deg;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
   }
   78% {
-    left: 90%;
-    rotate: 238deg;
+    left: var(--jellyMostLeft);
+    transform: rotate(238deg);
+    -webkit-transform: rotate(238deg);
   }
   85% {
     left: 40%;
     bottom: 30%;
-    rotate: 238deg;
+    transform: rotate(238deg);
+    -webkit-transform: rotate(238deg);
   }
   87% {
     left: 40%;
     bottom: 30%;
-    rotate: 498deg;
+    -webkit-transform: rotate(498deg);
   }
   88% {
     left: 40%;
     bottom: 30%;
-    rotate: 598deg;
+    transform: rotate(598deg);
+    -webkit-transform: rotate(598deg);
   }
   98% {
-    rotate: 598deg;
+    transform: rotate(598deg);
+    -webkit-transform: rotate(598deg);
   }
   100% {
-    rotate: 85deg;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
     bottom: 10%;
     left: 0;
   }
