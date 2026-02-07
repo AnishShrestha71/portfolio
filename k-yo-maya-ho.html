@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K Yo Maya Ho ?</title>
+  </head>
+  <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background: linear-gradient(to right, #ff512f, #dd2476);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .second{
+        display: none;
+    }
+  </style>
+  <body>
+    <div
+      id="stage"
+      class="relative w-full h-screen flex justify-center font-bold text-6xl items-center"
+    >
+      <div class="first">
+        <h2 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center">
+            Will you be My Valentine ?
+        </h2>
+        <div class="flex gap-6 justify-center items-center mt-10">
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-10">
+            <button
+                id="yesBtn"
+                class="w-48 sm:w-64 px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-4xl font-semibold text-white border border-pink-300 bg-gradient-to-r from-[#ff512f] to-[#dd2476] shadow-lg shadow-pink-500/40 hover:scale-105 hover:shadow-xl active:scale-95 transition-all duration-300"
+            >
+                Yes ❤️
+            </button>
+
+            <button
+                id="noBtn"
+                class="w-48 mt-10 sm:mt-0 sm:w-64 px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-4xl font-semibold text-pink-700 bg-pink border border-pink-300 shadow-md transition-transform duration-300"
+            >
+                No
+            </button>
+         </div>
+        </div>
+        
+      </div>
+      <div class="second flex gap-6 justify-center items-center mt-10">
+            <div>
+                <h2 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center">Thank you for being my Valentine ❤️</h2>
+                <img src="peach-goma-spin.gif" class="m-auto" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <!-- Audio elements -->
+    <audio id="noHoverSound" preload="auto">
+      <source src="mp3/na_nabhannu_la.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="noClickSound" preload="auto">
+      <source src="mp3/na_nabhannu_la.mp3"" type="audio/mpeg" />
+    </audio>
+    <audio id="yesHoverSound" preload="auto">
+      <source src="mp3/k_yo_maya_ho.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="yesClickSound" preload="auto">
+      <source src="mp3/panche_baja.mp3" type="audio/mpeg" />
+    </audio>
+  </body>
+   <script>
+    const stage = document.getElementById("stage");
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+    
+    // Audio elements
+    const noHoverSound = document.getElementById("noHoverSound");
+    const noClickSound = document.getElementById("noClickSound");
+    const yesHoverSound = document.getElementById("yesHoverSound");
+    const yesClickSound = document.getElementById("yesClickSound");
+
+    const allAudios = [noHoverSound, noClickSound, yesHoverSound, yesClickSound];
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let audioEnabled = false;
+
+    // Track mouse position
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    // Stop all other audio
+    function stopAllAudio(except = null) {
+      allAudios.forEach(audio => {
+        if (audio !== except) {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      });
+    }
+
+    // Enable audio on first user interaction
+    function enableAudio() {
+      if (!audioEnabled) {
+        // Try to play and pause all audio elements to enable them
+        Promise.all(allAudios.map(audio => {
+          return audio.play().then(() => {
+            audio.pause();
+            audio.currentTime = 0;
+          }).catch(() => {});
+        })).then(() => {
+          audioEnabled = true;
+          console.log("Audio enabled!");
+        });
+      }
+    }
+
+    // Wait for DOM to be ready, then enable audio on first interaction
+    document.addEventListener("DOMContentLoaded", () => {
+      // Auto-click body after 1 second to enable audio
+      setTimeout(() => {
+        document.body.click();
+      }, 1000);
+
+      // Enable audio on any user interaction
+      const enableOnce = () => {
+        enableAudio();
+        document.removeEventListener("click", enableOnce);
+        document.removeEventListener("keydown", enableOnce);
+        document.removeEventListener("touchstart", enableOnce);
+      };
+
+      document.addEventListener("click", enableOnce);
+      document.addEventListener("keydown", enableOnce);
+      document.addEventListener("touchstart", enableOnce);
+    });
+
+    function playSound(audioElement) {
+      if (audioEnabled && audioElement) {
+        // Stop all other audio first
+        stopAllAudio(audioElement);
+        
+        // Play the target audio
+        audioElement.currentTime = 0;
+        audioElement.play().catch(err => {
+          console.log("Audio play failed:", err);
+        });
+      }
+    }
+
+    function moveNoButton() {
+      const stageRect = stage.getBoundingClientRect();
+      const noRect = noBtn.getBoundingClientRect();
+      const yesRect = yesBtn.getBoundingClientRect();
+
+      // Get current transform values
+      const currentTransform = window.getComputedStyle(noBtn).transform;
+      let currentX = 0, currentY = 0;
+      
+      if (currentTransform && currentTransform !== 'none') {
+        const values = currentTransform.match(/matrix\((.+)\)/);
+        if (values) {
+          const parts = values[1].split(', ');
+          currentX = parseFloat(parts[4]);
+          currentY = parseFloat(parts[5]);
+        }
+      }
+      
+
+      let x, y, safe;
+      let attempts = 0;
+      const maxAttempts = 150;
+
+      do {
+        safe = true;
+        attempts++;
+
+        // Stricter padding and movement limits
+        const padding = 50;
+        const maxMovement = 200; // Limit how far it can move in one jump
+        
+        x = (Math.random() - 0.5) * 2 * maxMovement;
+        y = (Math.random() - 0.5) * 2 * maxMovement;
+
+        // Calculate absolute position (original position + current transform + new transform)
+        const originalLeft = noRect.left - currentX;
+        const originalTop = noRect.top - currentY;
+        const originalRight = noRect.right - currentX;
+        const originalBottom = noRect.bottom - currentY;
+
+        const futureLeft = originalLeft + x;
+        const futureRight = originalRight + x;
+        const futureTop = originalTop + y;
+        const futureBottom = originalBottom + y;
+
+        // Check collision with YES button (with bigger buffer)
+        const yesBuffer = 50;
+        if (
+          futureRight + yesBuffer > yesRect.left &&
+          futureLeft - yesBuffer < yesRect.right &&
+          futureBottom + yesBuffer > yesRect.top &&
+          futureTop - yesBuffer < yesRect.bottom
+        ) {
+          safe = false;
+        }
+
+        // Check if future position is under mouse cursor (with buffer)
+        const mouseBuffer = 80; // Buffer around mouse position
+        if (
+          mouseX > futureLeft - mouseBuffer &&
+          mouseX < futureRight + mouseBuffer &&
+          mouseY > futureTop - mouseBuffer &&
+          mouseY < futureBottom + mouseBuffer
+        ) {
+          safe = false;
+        }
+
+        // Check bounds with padding
+        if (
+          futureLeft < stageRect.left + padding ||
+          futureRight > stageRect.right - padding ||
+          futureTop < stageRect.top + padding ||
+          futureBottom > stageRect.bottom - padding
+        ) {
+          safe = false;
+        }
+
+        if (attempts >= maxAttempts) {
+          break;
+        }
+      } while (!safe);
+
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    // No button events
+    noBtn.addEventListener("mouseenter", () => {
+      playSound(noHoverSound);
+      moveNoButton();
+    });
+    
+    noBtn.addEventListener("click", () => {
+      playSound(noClickSound);
+      moveNoButton();
+    });
+
+    // Yes button events
+    yesBtn.addEventListener("mouseenter", () => {
+      playSound(yesHoverSound);
+    });
+    
+    yesBtn.addEventListener("click", () => {
+      playSound(yesClickSound);
+      document.querySelector('.first').style.display = 'none';
+      document.querySelector('.second').style.display = 'block';
+    });
+
+    yesBtn.addEventListener("mouseleave", () => {
+    yesHoverSound.pause();
+    yesHoverSound.currentTime = 0;
+    });
+  </script>
+</html>
